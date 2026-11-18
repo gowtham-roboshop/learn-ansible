@@ -1,0 +1,23 @@
+- name: datatypes
+  hosts: local
+  connection: local
+  vars:
+   course: " devops with aws"
+   duration_in_hrs: 150
+   is_live_sessions: true
+   topics:
+   - aws
+   - git
+   - docker
+  more_details: # dictionary/map
+      trainer: sivakumar
+      months: 4
+  exact_duration_in_months: 4.5 
+
+  tasks:
+  - name: print info and type
+    debug:
+      msg: |
+        name: "{{ course }} : {{ course | type_debug }} "
+        duration: "{{duration_in_hrs}} : {{duration_in_hrs | type_debug}}"
+        live_session: "{{is_live_sessions}} : {{is_live_sessions | type_debug}}"
