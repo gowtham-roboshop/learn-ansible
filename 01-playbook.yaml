@@ -1,0 +1,7 @@
+- name: msg
+  hosts: local
+  connection: local
+  tasks:
+  - name: greeting the local
+    debug:
+      msg: "Hello Ansible!"
