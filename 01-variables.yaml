@@ -1,0 +1,12 @@
+- name: demo on variables
+  hosts: local
+  connection: local
+  vars:
+    couse: devops
+    trainer: siva kumar reddy
+  tasks:
+  - name: printing vars
+    debug:
+      msg: " I am learning {{couse}} and my trainer is {{trainer}}"
+
+      
