@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    course: "ansible ffrom play"
+    course: "ansible from play"
   vars_files:
   - course.yaml
   vars_prompt:
@@ -11,8 +11,8 @@
     private: false
   tasks:
   - name: print course information
-    vars:
-     course: "ansible form tasks"
+    # vars:
+    #  course: "ansible form tasks"
     debug:
       msg: "hi i am learning {{course}}" 
 
