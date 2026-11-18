@@ -1,0 +1,19 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars:
+    course: "ansible ffrom play"
+  var_file:
+  - course.yaml
+  vars_prompt:
+  - name: course
+    prompt: please enter your course
+    private: false
+  tasks:
+  - name: print course information
+    vars:
+     course: "ansible form tasks"
+    debug:
+      msg: "hi i am learning {{course}}" 
+
+      
